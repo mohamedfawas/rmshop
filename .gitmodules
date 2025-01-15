@@ -1,0 +1,15 @@
+[submodule "rmshop-proto"]
+	path = rmshop-proto
+	url = https://github.com/mohamedfawas/rmshop-proto.git
+[submodule "rmshop-auth-service"]
+	path = rmshop-auth-service
+	url = https://github.com/mohamedfawas/rmshop-auth-service.git
+[submodule "rmshop-admin-service"]
+	path = rmshop-admin-service
+	url = https://github.com/mohamedfawas/rmshop-admin-service.git
+[submodule "rmshop-user-service"]
+	path = rmshop-user-service
+	url = https://github.com/mohamedfawas/rmshop-user-service.git
+[submodule "rmshop-api-gateway"]
+	path = rmshop-api-gateway
+	url = https://github.com/mohamedfawas/rmshop-api-gateway.git
