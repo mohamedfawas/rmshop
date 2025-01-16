@@ -17,9 +17,7 @@ services:
       retries: 5
 
   auth-service:
-    build: 
-      context: ./rmshop-auth-service
-      dockerfile: Dockerfile
+    build: ./rmshop-auth-service
     environment:
       - DB_HOST=postgres
       - DB_PORT=5432
@@ -34,5 +32,22 @@ services:
       postgres:
         condition: service_healthy
 
+  admin-service:
+    build: ./rmshop-admin-service
+    environment:
+      - SERVER_HOST=0.0.0.0
+      - SERVER_PORT=50052
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - DB_NAME=rmshop
+      - DB_SSLMODE=disable
+    ports:
+      - "50052:50052"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
 volumes:
-  postgres_data: 
+  postgres_data:
